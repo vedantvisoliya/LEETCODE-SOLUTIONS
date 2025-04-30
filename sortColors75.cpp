@@ -8,16 +8,14 @@ using namespace std;
 
 void sortColors(vector<int>& nums){
     int tempNum;
-    int j = 0;
     for (int i = 0; i < nums.size()-1; i++){
-        for(j = i + 1; j < nums.size(); j++){
+        for(int j = i + 1; j < nums.size(); j++){
             if(nums[i] > nums[j]){
                 tempNum = nums[i];
                 nums[i] = nums[j];
                 nums[j] = tempNum;
             }
         }
-        j = 0;
     }
 }
 
